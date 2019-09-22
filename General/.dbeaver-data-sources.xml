@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="postgres-jdbc-16acce22229-3f285a5748134741" provider="postgresql" driver="postgres-jdbc" name="PostgreSQL - logistica" save-password="true" read-only="false">
+		<connection host="localhost" port="5432" server="" database="logistica" url="jdbc:postgresql://localhost:5432/logistica" user="postgres" password="AwsVNEZRQQVl8w==" home="postgresql-x64-9.6" type="dev">
+			<property name="connectTimeout" value="20"/>
+			<property name="loginTimeout" value="20"/>
+			<provider-property name="@dbeaver-show-non-default-db@" value="false"/>
+			<provider-property name="@dbeaver-show-template-db@" value="false"/>
+			<network-handler type="CONFIG" id="postgre_ssl" enabled="false" save-password="true"/>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="true">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="implementation" value="jsch"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="true">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<bootstrap defaultObject="sch_weblogistica"/>
+		</connection>
+	</data-source>
+	<data-source id="dbeaver-sample-database-sqlite-1" provider="generic" driver="sqlite_jdbc" name="DBeaver Sample Database (SQLite)" save-password="true" show-system-objects="true" read-only="false">
+		<connection server="" database="C:\Users\Persie\.dbeaver4\.metadata\sample-database-sqlite-1\Chinook.db" url="jdbc:sqlite:C:\Users\Persie\.dbeaver4\.metadata\sample-database-sqlite-1\Chinook.db" type="dev"/>
+	</data-source>
+	<data-source id="postgres-jdbc-16b1196d599-3b6a482c99937b71" provider="postgresql" driver="postgres-jdbc" name="PostgreSQL - sftp" save-password="true" read-only="false">
+		<connection host="localhost" port="5432" server="" database="sftp" url="jdbc:postgresql://localhost:5432/sftp" user="postgres" password="AwsVNEZRQQVl8w==" home="postgresql-x64-9.6" type="dev">
+			<property name="connectTimeout" value="20"/>
+			<property name="loginTimeout" value="20"/>
+			<provider-property name="@dbeaver-show-non-default-db@" value="false"/>
+			<provider-property name="@dbeaver-show-template-db@" value="false"/>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="true">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="implementation" value="jsch"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="true">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<network-handler type="CONFIG" id="postgre_ssl" enabled="false" save-password="true"/>
+			<bootstrap defaultObject="sftpvm"/>
+		</connection>
+		<custom-property name="resultset.maxrows" value="1000"/>
+	</data-source>
+	<data-source id="postgres-jdbc-16b35845af6-444a299f228c7d7b" provider="postgresql" driver="postgres-jdbc" name="PostgreSQL - vm_weblogistica" save-password="true" read-only="false">
+		<connection host="localhost" port="5005" server="" database="vm_weblogistica" url="jdbc:postgresql://localhost:5005/vm_weblogistica" user="devvm" password="NldeeWYScho1Nmbf" home="postgresql-x64-9.6" type="dev">
+			<property name="connectTimeout" value="20"/>
+			<property name="loginTimeout" value="20"/>
+			<provider-property name="@dbeaver-show-non-default-db@" value="false"/>
+			<provider-property name="@dbeaver-show-template-db@" value="false"/>
+			<network-handler type="CONFIG" id="postgre_ssl" enabled="false" save-password="true"/>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="true">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="implementation" value="jsch"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="true">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<bootstrap defaultObject="sch_weblogistica"/>
+		</connection>
+	</data-source>
+	<data-source id="postgres-jdbc-16bcd465a48-1c2faed65cec8056" provider="postgresql" driver="postgres-jdbc" name="PostgreSQL - Demo" save-password="true" read-only="false">
+		<connection host="localhost" port="5432" server="" database="demo" url="jdbc:postgresql://localhost:5432/demo" user="postgres" password="AwsVNEZRQQVl8w==" home="postgresql-x64-9.6" type="dev">
+			<property name="connectTimeout" value="20"/>
+			<property name="loginTimeout" value="20"/>
+			<provider-property name="@dbeaver-show-non-default-db@" value="false"/>
+			<provider-property name="@dbeaver-show-template-db@" value="false"/>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="true">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="implementation" value="jsch"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="true">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<network-handler type="CONFIG" id="postgre_ssl" enabled="false" save-password="true"/>
+			<bootstrap defaultObject="sch_demo"/>
+		</connection>
+	</data-source>
+	<data-source id="postgres-jdbc-16bef1906c8-54f7fc45a78cc40e" provider="postgresql" driver="postgres-jdbc" name="PostgreSQL - autorizacion" save-password="true" read-only="false">
+		<connection host="localhost" port="5005" server="" database="vm_api_autorizacion" url="jdbc:postgresql://localhost:5005/vm_api_autorizacion" user="devvm" password="NldeeWYScho1Nmbf" home="postgresql-x64-9.6" type="dev">
+			<property name="connectTimeout" value="20"/>
+			<property name="loginTimeout" value="20"/>
+			<provider-property name="@dbeaver-show-non-default-db@" value="false"/>
+			<provider-property name="@dbeaver-show-template-db@" value="false"/>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="true">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="implementation" value="jsch"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="CONFIG" id="postgre_ssl" enabled="false" save-password="true"/>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="true">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<bootstrap defaultObject="sch_api_autorizacion"/>
+		</connection>
+	</data-source>
+	<data-source id="postgres-jdbc-16bf1d902b7-53471f53fe3c06fd" provider="postgresql" driver="postgres-jdbc" name="PostgreSQL - sftp dev" save-password="true" read-only="false">
+		<connection host="localhost" port="5005" server="" database="vm_sftp_20190714" url="jdbc:postgresql://localhost:5005/vm_sftp_20190714" user="devvm" password="NldeeWYScho1Nmbf" home="postgresql-x64-9.6" type="dev">
+			<property name="connectTimeout" value="20"/>
+			<property name="loginTimeout" value="20"/>
+			<provider-property name="@dbeaver-show-non-default-db@" value="false"/>
+			<provider-property name="@dbeaver-show-template-db@" value="false"/>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="true">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="implementation" value="jsch"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="CONFIG" id="postgre_ssl" enabled="false" save-password="true"/>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="true">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<bootstrap defaultObject="sftpvm"/>
+		</connection>
+	</data-source>
+	<data-source id="microsoft-16d5951e676-5df044560ced328d" provider="sqlserver" driver="microsoft" name="MS SQL Server - rdstmppoketpro.czbqbyrg9atr.us-eas" save-password="true" read-only="false">
+		<connection host="rdstmppoketpro.czbqbyrg9atr.us-east-1.rds.amazonaws.com" port="1433" server="" database="" url="jdbc:sqlserver://;serverName=rdstmppoketpro.czbqbyrg9atr.us-east-1.rds.amazonaws.com;" user="poketpro" password="HT5RF0QVYRgyRFQbNE5Obkb2" type="dev">
+			<property name="trustServerCertificate" value="true"/>
+			<provider-property name="@dbeaver-authentication@" value="SQL_SERVER_PASSWORD"/>
+			<provider-property name="@dbeaver-show-all-schemas@" value="true"/>
+		</connection>
+	</data-source>
+	<filters/>
+</data-sources>
