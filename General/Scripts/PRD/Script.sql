@@ -49,38 +49,64 @@ where
 
 	ORDER BY DATESTAMP desc;
 
-SELECT id FROM OPENJSON ('{ "id" : 122}') WITH (id integer);
-SELECT fullSerialNumber FROM OPENJSON ('{"type":"SALE","entryMode":"EMV","merchantIdentifier":"602370409","nbo":"849863346","responseCode":"APPROVED","externalResponseCode":"000","responseMessage":"Approved 239946 (000)","authorizationCode":"239946","traceNumber":"456007","processorId":"991192653749016","referenceNumber":"926522183410","localDateTime":1569208715000,"fullSerialNumber":"60689267","amount":18.00,"currency":604,"installments":1,"cardNumber":"4557********1141","cardHolderName":"","holderIdentificationType":"","holderIdentificationNumber":"","latitude":0.0,"longitude":0.0}') WITH (fullSerialNumber varchar(1000));
-
 select
-	fecha_registro as fecha,
-	ws_geo_request,
-	(select fullSerialNumber from openjson(ws_geo_request) with (fullSerialNumber varchar(100))) as fullSerialNumber,
-	ws_geo_response,
-	ws_geo_responsecode,
-	ws_geo_responseDatacode,
-	*
+	--distinct 
+	--fecha_registro as fecha,
+	--ws_geo_request,
+	distinct (select fullSerialNumber from openjson(ws_geo_request) with (fullSerialNumber varchar(100))) as fullSerialNumber
+	--ws_geo_response,
+	--ws_geo_responsecode,
+	--ws_geo_responseDatacode,
+	--*
 from
 	XZEDI.dbo.LOG_TRX_GEOPAGOS (nolock)
 where
 	ws_geo_responsecode = 400
-	and fecha_registro >= '2019-09-22 00:00:00'
+	--and fecha_registro >= '2019-09-22 00:00:00'
 	and ws_geo_response like '%Lector no encontrado%'
-order by
-	fecha_registro desc;
+--order by
+--	fecha_registro desc
+;
 
-select
-	DATESTAMP as fecha,
-	ALTERNATETERMINALID,
+select distinct 
+	--DATESTAMP as fecha,
+	--ALTERNATETERMINALID,
 	CARDACQID,
-	CARDACQNAME,
-	*
+	CARDACQNAME
+	--*
 from
 	XZEDI.dbo.TMP_CAPTURE (nolock)
 where
-	ALTERNATETERMINALID = '60635271'
-order by
-	DATESTAMP desc;
+	ALTERNATETERMINALID in 
+	('60632515',
+'60632645',
+'60632884',
+'60632889',
+'60633357',
+'60633772',
+'60633781',
+'60634103',
+'60634450',
+'60634493',
+'60634569',
+'60634803',
+'60635046',
+'60635148',
+'60635271',
+'60689267',
+'60689361',
+'60689386',
+'60689575',
+'60690449',
+'60691415',
+'60692411',
+'60693392',
+'60693680',
+'60693721',
+'60694186',
+'6K298075');
+
+
 
 
 
